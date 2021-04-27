@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col col-md-6">
+          <div class="container mt-5">
+              <form #frmPac="ngForm" (submit)="modificarPaciente()">
+                  <p>
+                      <label>Nombre: </label>
+                      <input type="text" #nombre="ngModel" name="nombre" [(ngModel)]="paciente.nombre" class="form-control">
+                  </p>
+                  <p>
+                      <label>Sexo: </label>
+                      <input type="text" #sexo="ngModel" name="sexo" [(ngModel)]="paciente.sexo" class="form-control">
+                  </p>
+                  <p>
+                      <label>CURP: </label>
+                      <input type="text" #curp="ngModel" name="curp" [(ngModel)]="paciente.curp" class="form-control">
+                  </p>
+                  <p>
+                      <label>Fecha: </label>
+                      <input type="text" #fecha="ngModel" name="fecha" [(ngModel)]="paciente.fecha" class="form-control">
+                  </p>
+                  <p>
+                      <label>Dosis: </label>
+                      <input type="text" #dosis="ngModel" name="dosis" [(ngModel)]="paciente.dosis" class="form-control">
+                  </p>
+                  <p>
+                      <label>Marca: </label>
+                      <input type="text" #marca="ngModel" name="marca" [(ngModel)]="paciente.marca" class="form-control">
+                  </p>
+                  <input type="submit" value="Modificar" class="btn btn-outline-primary">
+                  </form>
+          </div>
+      </div>
+  </div>
+</div>

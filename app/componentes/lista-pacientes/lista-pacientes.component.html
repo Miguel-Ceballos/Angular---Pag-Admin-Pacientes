@@ -1,0 +1,49 @@
+<br>
+  <img class="derecha" src="assets/img/doc.png" align="left">
+<br>
+<br>
+<br>
+
+<div>
+  <button (click)="registraPaciente()" class="btn btn-success">
+    <h5>
+      Registrar un paciente
+    </h5>
+  </button>
+</div>
+<br><br>
+<table class="table table-primary  mt-5">
+  <thead class="thead-light">
+    <tr>
+      <th>Nombre</th>
+      <th class="text-right">Sexo</th>
+      <th class="text-right">CURP</th>
+      <th class="text-right">Fecha</th>
+      <th class="text-right">Dosis</th>
+      <th class="text-right">Marca</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let paciente of listaPacientes">
+      <td>{{ paciente.nombre }}</td>
+      <td class="text-right">{{ paciente.sexo }}</td>
+      <td class="text-right">{{ paciente.curp }}</td>
+      <td class="text-right">{{ paciente.fecha }}</td>
+      <td class="text-right">{{ paciente.dosis }}</td>
+      <td class="text-right">{{ paciente.marca }}</td>
+      <td class="text-center">
+        <a
+          class="btn btn-warning"
+          [routerLink]="['/editapacientes', paciente._id]"
+          >Editar</a
+        >
+        &nbsp;&nbsp;
+        <button class="btn btn-danger" (click)="eliminarPaciente(paciente._id)">
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>

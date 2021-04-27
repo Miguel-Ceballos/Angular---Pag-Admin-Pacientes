@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+h2 {
+  text-align: center;
+}
+body {
+  background-color: aqua;
+  color: aqua;
+  background-image:url(assets/img/fondo.jpg);
+}
+table {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+.derecha {
+  margin: 0px 50px 10px 50px;
+}
+.izquierda {
+  margin: 180px -100px 10px 80px;
+}
+input {
+  margin-right: 10px;
+}
